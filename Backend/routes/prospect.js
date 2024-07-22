@@ -1,7 +1,7 @@
 const express = require("express");
 const {
   createProspect,
-  getAllProspect,
+  getAllProspects,
   updateProspect,
   deleteProspect,
   getOneProspect,
@@ -12,7 +12,7 @@ const router = express.Router();
 router.post("/", createProspect);
 
 //GET ALL PROSPECTS
-router.get("/", getAllProspect);
+router.get("/", getAllProspects);
 
 // UPDATE PROSPECT
 router.put("/:id", updateProspect);

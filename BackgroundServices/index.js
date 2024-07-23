@@ -3,6 +3,10 @@ const app = express();
 const dotenv = require("dotenv");
 const cron = require('node-cron');
 const dbConnection = require("./utils/db");
+const { sendDetailsProspectEmail } = require("./EmailServices/sendDetailsProspect");
+const { sendEligibilityEmail } = require("./EmailServices/sendEligibilityEmail");
+const { sendDonorDetailsEmail } = require("./EmailServices/sendDonorDetailsEmail");
+const { sendBloodDonationReminder } = require("./EmailServices/sendBloodDonationReminder");
 dotenv.config();
 
 // SERVER
@@ -12,7 +16,10 @@ const PORT =  process.env.PORT;
 
 const run = () =>{
     cron.schedule('* * * * * *', () => {
-        
+        sendDetailsProspectEmail();
+        sendEligibilityEmail();
+        sendBloodDonationReminder();
+        sendDonorDetailsEmail();
    });
 }
 

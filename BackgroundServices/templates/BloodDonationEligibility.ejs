@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Donation Eligibility Notification</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        min-width: 100%;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222222;
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      h1 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-top: 0;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: 24px;
+      }
+
+      .divider {
+        border-top: 1px solid #ccc;
+        margin: 20px 0;
+      }
+
+      .email-wrapper {
+        max-width: 700px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+      }
+
+      .email-header {
+        background-color: #1e1e1e;
+        padding: 30px;
+        color: #fff;
+      }
+
+      .email-body {
+        padding: 14px;
+        background-color: #f4f3f3;
+      }
+
+      .email-footer {
+        background-color: #1e1e1e;
+        padding: 14px;
+        color: #f46a6a;
+      }
+
+      img {
+        padding: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <div class="email-header">
+        <img
+          src="https://res.cloudinary.com/dap91fhxh/image/upload/v1720958373/logo1_ewwjxg.png"
+          height="100px"
+          width="400px"
+          alt="BloodBridge Logo"
+        />
+      </div>
+      <div class="email-body">
+        <h1>Blood Donation Eligibility Notification</h1>
+        <p>Hello <%= name %>,</p>
+        <p>Thank you for your interest in donating blood through BloodBridge.</p>
+        <p>We regret to inform you that based on the information provided, you do not meet the eligibility criteria for blood donation at this time.</p>
+        <p>The specific reasons for ineligibility are as follows:</p>
+        <ul>
+          <li>Minimum Age Requirement: You must be at least 18 years old to donate blood.</li>
+          <li>Minimum Weight Requirement: You must weigh at least 52kg to donate blood.</li>
+        </ul>
+        <div class="divider"></div>
+        <p>According to the details you provided:</p>
+        <p><strong>Age:</strong> <%= age %> years</p>
+        <p><strong>Weight:</strong> <%= weight %> kg</p>
+        <div class="divider"></div>
+        <p>We encourage you to meet these requirements and reapply in the future. Your willingness to donate is greatly appreciated, and we hope to welcome you as a donor once you meet the eligibility criteria.</p>
+        <h3>Note:</h3>
+        <p>If you believe there has been an error or if you have any questions, please contact us at <a href="mailto:support@bloodbridge.com">support@bloodbridge.com</a>.</p>
+      </div>
+      <div class="email-footer">
+        <p>
+          Thank you for your understanding and support.
+        </p>
+        <p>
+          Sincerely, <br />
+          The BloodBridge Team
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

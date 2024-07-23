@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Donation Reminder</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        min-width: 100%;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222222;
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      h1 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-top: 0;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: 24px;
+      }
+
+      .divider {
+        border-top: 1px solid #ccc;
+        margin: 20px 0;
+      }
+
+      .email-wrapper {
+        max-width: 700px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+      }
+
+      .email-header {
+        background-color: #1e1e1e;
+        padding: 30px;
+        color: #fff;
+      }
+
+      .email-body {
+        padding: 14px;
+        background-color: #f4f3f3;
+      }
+
+      .email-footer {
+        background-color: #1e1e1e;
+        padding: 14px;
+        color: #ef7676;
+      }
+
+      img {
+        padding: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <div class="email-header">
+        <img
+          src="https://res.cloudinary.com/dap91fhxh/image/upload/v1720958373/logo1_ewwjxg.png"
+          height="100px"
+          width="400px"
+          alt="BloodBridge Logo"
+        />
+      </div>
+      <div class="email-body">
+        <h1>Blood Donation Reminder</h1>
+        <p>Hello <%= name %>,</p>
+        <p>We hope this message finds you well.</p>
+        <p>We wanted to remind you that it has been 52 days since your last blood donation. Your generosity has already made a significant impact, and we would be grateful if you could consider donating blood again.</p>
+        <div class="divider"></div>
+        <p>Here are your last donation details:</p>
+        <p><strong>Date of Last Donation:</strong> <%= date %></p>
+        <div class="divider"></div>
+        <p>Your continued support helps save lives and ensures a steady supply of blood for those in need.</p>
+        <h3>Next Steps:</h3>
+        <p>If you are willing to donate again, please visit our website or contact us to schedule your next donation.</p>
+        
+        <img
+          src="https://res.cloudinary.com/dap91fhxh/image/upload/v1720957791/hero1_trpojy.jpg"
+          alt="Blood Donation"
+          height="250px"
+          width="500px"
+        />
+        <h3>Note:</h3>
+        <p>If you have any questions or need assistance, please don't hesitate to contact us at <a href="mailto:support@bloodbridge.com">support@bloodbridge.com</a>.</p>
+      </div>
+      <div class="email-footer">
+        <p>
+          Thank you for your continued generosity and support.
+        </p>
+        <p>
+          Sincerely, <br />
+          The BloodBridge Team
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

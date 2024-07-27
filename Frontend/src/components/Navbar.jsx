@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 
+
 const Navbar = () => {
   return (
     <div className="flex items-center justify-between h-[100px] px-[200px]">

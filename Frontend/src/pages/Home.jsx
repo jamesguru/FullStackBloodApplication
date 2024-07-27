@@ -1,16 +1,28 @@
-import Featured from "../components/Featured"
-import Hero from "../components/Hero"
-import Navbar from "../components/Navbar"
+import Contact from "../components/Contact";
+import Featured from "../components/Featured";
+import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { Element } from "react-scroll";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <Featured />
-      
-    </div>
-  )
-}
+      <Element name="hero">
+        <Hero />
+      </Element>
 
-export default Home
+      <Element name="featured">
+        <Featured />
+      </Element>
+      <Element name="contact">
+        <Contact />
+      </Element>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Home;

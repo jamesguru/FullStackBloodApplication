@@ -4,7 +4,7 @@ const { verifyTokenAndAuthorization } = require("../middlewares/verifyToken");
 const router = express.Router();
 
 // ADD DONOR
-router.post("/",verifyTokenAndAuthorization,createDonor);
+router.post("/",createDonor);
 
 // GET ALL DONORS
 router.get("/", getAlldonors);

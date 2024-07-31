@@ -59,6 +59,10 @@ const deleteProspect = async (req, res) => {
   }
 };
 
-
-
-module.exports={deleteProspect,getOneProspect,getAllProspects,updateProspect,createProspect}
+module.exports = {
+  deleteProspect,
+  getOneProspect,
+  getAllProspects,
+  updateProspect,
+  createProspect,
+};

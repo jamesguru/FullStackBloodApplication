@@ -21,6 +21,6 @@ router.put("/:id", updateProspect);
 router.delete("/:id", deleteProspect);
 
 // GET ONE PROSPECT
-router.post("/find/:id", getOneProspect);
+router.get("/find/:id", getOneProspect);
 
 module.exports = router;

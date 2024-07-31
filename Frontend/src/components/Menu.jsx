@@ -35,7 +35,7 @@ const Menu = () => {
           >
             <FaHome
               className={`mr-[15px] text-red-500
-              ${activeLink === "/admin" ? "text-red-500" : "text-white"}     
+              ${activeLink === "/admin" ? "text-white" : "text-red-500"}     
               `}
             />
             Home
@@ -64,7 +64,7 @@ const Menu = () => {
             <FaBox
               className={`mr-[15px] text-red-500
               ${
-                activeLink === "/admin/donors" ? "text-red-500" : "text-white"
+                activeLink === "/admin/donors" ? "text-white" : "text-red-500"
               }     
               `}
             />
@@ -77,7 +77,7 @@ const Menu = () => {
             ${activeLink === "/admin/prospects" ? "bg-red-300 p-[10px] w-[200px] text-white" : ""}
             `}>
             <FaUsers className={`mr-[15px] text-red-500
-              ${activeLink === "/admin/prospects" ? "text-red-500" : "text-white"}     
+              ${activeLink === "/admin/prospects" ? "text-white" : "text-red-500"}     
               `} />
             Prospects
           </li>

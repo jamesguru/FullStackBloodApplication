@@ -1,4 +1,4 @@
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Navigate, Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Admin from "./pages/Admin";
@@ -8,8 +8,11 @@ import Menu from "./components/Menu";
 import Prospect from "./pages/Prospect";
 import Donor from "./pages/Donor";
 import NewDonor from "./pages/NewDonor";
+import {useSelector } from "react-redux";
+
 
 function App() {
+  const user = useSelector((state) => state.user);
   const Layout = () => {
     return (
       <div className="flex">
@@ -34,7 +37,7 @@ function App() {
     },
     {
       path: "/admin",
-      element: <Layout />,
+      element: user.currentUser ? <Layout /> : <Navigate to="/login" />,
       children: [
         {
           path: "/admin",

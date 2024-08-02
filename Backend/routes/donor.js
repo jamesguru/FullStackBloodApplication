@@ -1,10 +1,10 @@
 const express = require("express");
 const { createDonor, getAlldonors, updateDonor, getOneDonor, deleteDonor, getDonorsStats } = require("../controllers/donor");
-const { verifyTokenAndAuthorization } = require("../middlewares/verifyToken");
+const { verifyToken } = require("../middlewares/verifyToken");
 const router = express.Router();
 
 // ADD DONOR
-router.post("/",createDonor);
+router.post("/",verifyToken, createDonor);
 
 // GET ALL DONORS
 router.get("/", getAlldonors);
